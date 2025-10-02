@@ -9,16 +9,16 @@ public class Usuario {
 
 	private Integer id;
 	private String nome;
-	private Integer limiteDeLivros;
+	private Integer quantidadeDeLivros;
 	private boolean ativo;
 	
 	private Integer idLivro;
 	
-	public Usuario(Integer id, String nome, Integer limiteDeLivros, Integer idLivro) {
+	public Usuario(Integer id, String nome, Integer quantidadeDeLivros, boolean ativo, Integer idLivro) {
 		this.id = id;
 		this.nome = nome;
-		this.limiteDeLivros = limiteDeLivros;
-		this.ativo = true;
+		this.quantidadeDeLivros = quantidadeDeLivros;
+		this.ativo = ativo;
 		this.idLivro = idLivro;
 	}
 	
@@ -58,16 +58,16 @@ public class Usuario {
 	 * Método que retorna o limite de livros do usuário.
 	 * @return Limite de livros do Usuario.
 	 */
-	public Integer getLimiteDeLivros() {
-		return limiteDeLivros;
+	public Integer getQuantidadeDeLivros() {
+		return quantidadeDeLivros;
 	}
 	
 	/**
 	 * Método para atualizar o limite de livros do usuário.
 	 * @param limiteDeLivros
 	 */
-	public void setLimiteDeLivros(Integer limiteDeLivros) {
-		this.limiteDeLivros = limiteDeLivros;
+	public void setQuantidadeDeLivros(Integer quantidadeDeLivros) {
+		this.quantidadeDeLivros = quantidadeDeLivros;
 	}
 	
 	/**
@@ -112,7 +112,7 @@ public class Usuario {
 		String representacao = "========================="
 								+"ID: " + this.id + "\n"
 								+"Nome: " + this.nome + "\n"
-								+"Limite de livros: " + this.limiteDeLivros + "\n"
+								+"Quantidade de livros: " + this.quantidadeDeLivros + "\n"
 								+ "Status: " + (ativo?"Ativo":"Inativo") + "\n"
 								+ "=========================";
 		

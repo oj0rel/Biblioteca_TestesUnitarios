@@ -13,12 +13,12 @@ public class Livro {
 	private boolean emprestado;
 	private boolean ativo;
 	
-	public Livro(Integer id, String titulo, String autor) {
+	public Livro(Integer id, String titulo, String autor, boolean ativo) {
 		this.id = id;
 		this.titulo = titulo;
 		this.autor = autor;
 		this.emprestado = false;
-		this.ativo = true;
+		this.ativo = ativo;
 	}
 	
 	/**
